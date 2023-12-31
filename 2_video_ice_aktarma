@@ -1,0 +1,26 @@
+import cv2  # OpenCV kütüphanesini import ediyoruz
+import time  # Zaman fonksiyonlarını kullanabilmek için time kütüphanesini import ediyoruz
+
+video_name = "C:/Users/ugurh/Documents/python/OpenCV/Video içe aktarma/b.mp4"  # Video dosyasının yolunu belirtiyoruz
+
+cap = cv2.VideoCapture(video_name)  # VideoCapture fonksiyonu ile videoyu okuyoruz
+
+print("Genişlik: ",cap.get(3))  # Video genişliğini yazdırıyoruz
+print("Yükseklik: ",cap.get(4))  # Video yüksekliğini yazdırıyoruz
+
+if cap.isOpened() == False :  # Eğer video açılmazsa hata mesajı yazdırıyoruz
+    print("Hata")
+    
+while True:  # Video bitene kadar döngüyü sürdürüyoruz
+    ret , frame = cap.read()  # Videoyu frame frame okuyoruz
+    
+    if ret == True:  # Eğer frame okunduysa
+        time.sleep(0.01)  # Frame'ler arasında kısa bir bekleme süresi ekliyoruz
+        cv2.imshow("Video", frame)  # Frame'i ekrana yansıtıyoruz
+    else: break  # Eğer frame okunamazsa (video bittiğinde) döngüyü kırıyoruz
+
+    if cv2.waitKey(1) & 0xFF == ord("q"):  # Eğer q tuşuna basılırsa
+        break  # Döngüyü kırıyoruz
+    
+cap.release()  # VideoCapture nesnesini serbest bırakıyoruz
+cv2.destroyAllWindows()  # Tüm pencereleri kapatıyoruz
