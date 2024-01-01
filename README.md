@@ -21,13 +21,13 @@ OpenCV başlangıç örnekleri.
 
 ### Nesne Tespiti
 1. Kenar Algılama
-2. Köşe algılama
-3. kontur algılama
-4. renk ile nesne tespiti
-5. sablon ekleme
-6. özellik eşleştirme
-7. havza algoritması
+2. Köşe Algılama
+3. Kontur Algılama
+4. Renk İle Nesne Tespiti
+5. Şablon Ekleme
+6. Özellik Eşleştirme
+7. Havza Algoritması
 
 ### Projeler
-1. İnsan yüzü tnaıma
-2. kedi yüzü tanıma
+1. İnsan Yüzü Tanıma
+2. Kedi Yüzü Tanıma
