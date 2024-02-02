@@ -27,7 +27,3 @@ OpenCV başlangıç örnekleri.
 5. Şablon Ekleme
 6. Özellik Eşleştirme
 7. Havza Algoritması
-
-### Projeler
-1. İnsan Yüzü Tanıma
-2. Kedi Yüzü Tanıma
